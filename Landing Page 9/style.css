@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Neue Montreal;
+}
+
+section{
+    width: 100%;
+    padding: 2.5vw 2vw;
+    display: grid;
+    gap: 5vh;
+}
+
+h1{
+    line-height: 80%;
+    font-size: clamp(5rem, -4.375rem + 30vw, 12.5rem);
+    font-weight: 400;
+}
+
+h5{
+    font-size: clamp(1.25rem, 0.8594rem + 1.25vw, 1.5625rem);
+}
+
+p{
+    font-size: clamp(1rem, 0.9219rem + 0.25vw, 1.0625rem);
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*_________________________________________________*/
+#section-one{
+    background: #151515;
+    color: #e7e7e7;
+}
+
+#section-one .image{
+    position: relative;
+    margin: 0 auto;
+    width: 35%;
+    height: 50vh;
+    min-width: 300px;
+}
+
+#section-one .image .cover{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(134, 134, 255, 0.5);
+}
+
+#section-one .text{
+    width: 100%;
+    min-width: 300px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-one .text .text-part{
+    width: 40%;
+}
+
+
+/*_________________________________________________*/
+#section-two{
+    background: #e7e7e7;
+    color: #151515;
+    gap: 0;
+}
+
+#section-two .container{
+    width: 100%;
+    color: black;
+}
+
+/*_________________________________________________*/
+#section-two .container-one{
+    display: grid;
+    min-height: 33vh;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+#section-two .container-one > .photo{
+    background: rgb(134, 134, 255);
+    height: 100%;
+}
+
+
+/*_________________________________________________*/
+#section-two .container-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-two .container-flex > div:nth-child(2){
+    text-align: right;
+}
+
+#section-two .container-flex > div{
+    width: 30%;
+    min-width: 300px;
+}
+
+
+/*_________________________________________________*/
+#section-two .container-two{
+    align-items: flex-end;
+    border-bottom: 2px solid black;
+    padding-bottom: 2vh;
+    margin: 5vh 0 2vh 0;
+}
+
+
+/*_________________________________________________*/
+#section-two .container-three{
+    padding-top: 5vh;
+    border-top: 5px solid black;
+    gap: 5vh;
+}
+
+
+/*_________________________________________________*/
+#section-three{
+    background: rgb(185, 193, 220);
+    display: flex;
+    gap: 5vw
+}
+
+#section-three > .box{
+    width: 50%;
+}
+
+#section-three > .box-one > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-three > .box-one > div > .btn > p{
+    border: 2px solid black;
+    padding: 0.5em 1.3em;
+    border-radius: 100px;
+}
+
+#section-three > .box-one > div > .circle{
+    height: clamp(3.125rem, -0.7813rem + 12.5vw, 6.25rem);
+    width: clamp(3.125rem, -0.7813rem + 12.5vw, 6.25rem);
+    border-radius: 50%;
+    background: radial-gradient(140% 107.13% at 50% 10%, black 37.41%,#63e 69.27%,#fff 100%);
+}
+
+#section-three > .box-one > h5{
+    text-align: center;
+    width: 80%;
+    margin: 12vw auto;
+    padding-bottom: 2vh;
+    border-bottom: 3px solid black;
+}
+
+#section-three > .box-one > p{
+    margin: 0 auto;
+    width: 70%;
+    min-width: 300px;
+}
+
+#section-three > .box-two > .image{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+}
+
+
+
+
+/*_________________________________________________*/
+@media(max-width: 768px){
+    #section-one > h1{
+        margin-bottom: 2vh;
+    }
+    
+    #section-one .text .text-part{
+        width: 100%;
+    }
+
+     #section-one .text, #section-two .container-flex, #section-three{
+        flex-direction: column;
+        gap: 3vh
+    }
+
+    #section-two .container-flex > div{
+        width: 100%;
+    }
+
+    #section-three .box{
+        width: 100%;
+    }
+
+    #section-three > .box-two > .image{
+        margin-top: 5vh;
+        height: 45vh;
+    }
+
+}
+
+@media(max-width: 450px){
+    section{
+        padding: 3vh 3vh;
+    }
+}
