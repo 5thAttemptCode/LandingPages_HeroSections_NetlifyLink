@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+:root{
+    --background: whitesmoke;
+    --color: #151515;
+    --contrast-color: #0913d6;
+    --padding-right: 80px;
+    --padding-t: 10vh;
+    --padding-b: 5vh;
+}
+
+body{
+    background: var(--background);
+    color: var(--color);
+}
+
+
+/*______________________________________________*/
+section{
+    display: flex;
+    outline: 4px solid var(--color);
+    outline-offset: -10px;
+}
+
+.box{
+    width: 50%;
+    height: 100vh;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(40%);
+}
+
+
+/*______________________________________________*/
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: #0913d6;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    outline: 3px solid #0913d6;
+    outline-offset: 5px;
+}
+
+.circle > p{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: rotate 8s linear infinite;
+    color: var(--background);
+}
+
+span{
+    position: absolute;
+    left: 50%;
+    display: flex;
+    transform-origin: 0 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/*______________________________________________*/
+.one{
+    padding: 20px 0 20px 20px;
+}
+
+.one > .header > h3{
+    line-height: 95%;
+}
+
+.header{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.one > .header > .h1{
+    padding-right: var(--padding-right);
+    margin-top: var(--padding-t);
+}
+
+.one > .header > .h1 > h1{
+    font-size: clamp(4.375rem, -1.25rem + 10vw, 6.875rem);
+    font-weight: 300;
+    line-height: 90%;
+    border-bottom: 3px solid var(--color);
+    letter-spacing: -5px;
+}
+
+.one > .header > .h1 > h1:nth-child(2){
+    text-align: end;
+}
+
+.one > .header > .h1 > h3{
+    text-align: end;
+    padding: 20px 0;
+    font-size: clamp(1rem, 0.7656rem + 0.75vw, 1.1875rem);
+    font-weight: 500;
+}
+
+.one > .sub-header{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: var(--padding-right);
+    padding-bottom: var(--padding-b);
+}
+
+.one > .sub-header > .profile{
+    height: 60px;
+    width: 60px;
+    background: blue;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    filter: grayscale(100%);
+}
+
+.one > .sub-header > .profile > img{
+    scale: 1.5;
+}
+
+.one > .sub-header > p,
+.two > .box-box > .column > .column-text > p{
+    font-weight: 600;
+}
+
+.one > .sub-header > .buttons{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px
+}
+
+.one > .sub-header > .buttons > a{
+    border: 2px solid var(--color);
+    text-decoration: none;
+    color: var(--color);
+    padding: 2px 7px;
+    border-radius: 50px;
+    transition: all 0.1s;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.one > .sub-header > .buttons > a:hover{
+    color: var(--background);
+    background: var(--color);
+    border: 2px solid var(--background);
+}
+
+/*______________________________________________*/
+.two{
+    padding: 20px 20px 20px 0;
+}
+
+.box-box{
+    height: 100%;
+    width: 100%;
+    background: rgb(164, 185, 200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.box-box > .image{
+    width: 70%;
+    min-width: 320px;
+}
+
+.column{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.column-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.column-text-one{
+    padding-bottom: 10px;
+}
+
+.column-text-two{
+    padding-block: 10px;
+    border-top: 2px solid var(--color);
+    border-bottom: 2px solid var(--color);
+}
+
+.column-text-three{
+    padding-block: 10px;
+}
+
+/*______________________________________________*/
+@media (max-width: 768px){
+
+    :root{
+        --padding-b: 15vh;
+        --padding-right: 20px;
+    }
+
+    section{
+        flex-direction: column;
+        outline: none;
+    }
+
+    .circle{
+        top: 100%;
+    }
+
+    .box{
+        width: 100%;
+    }
+
+    .one{
+        padding: 20px 20px 0 20px;
+    }
+
+    .two{
+        padding: 0 20px 20px 20px;
+    }
+
+    .box-box{
+        padding-top: 100px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    
+    :root{
+        --padding-right: 0;
+    }
+    
+    .one{
+        padding: 7px 7px 0 7px;
+    }
+
+    .header{
+        padding-bottom: 20%;
+    }
+
+    .two{
+        padding: 0 7px 7px 7px;
+    }
+}

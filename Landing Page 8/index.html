@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+        <div class="box one">
+            <div class="header">
+                <h3>HENRY STRUCTURAL <br> WEBSITE D-SIGN</h3>
+                <div class="h1">
+                    <h1>DISCOVER</h1>
+                    <h1>SURFACE</h1>
+                    <h3>Available early access</h3>
+                </div>
+            </div>
+            <div class="sub-header">
+                <div class="profile">
+                    <img src="img2.jpg" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sunt 
+                    suscipit, expedita distinctio voluptas assumenda, soluta officia 
+                    facilis, libero quisquam quos quaerat dolor? Beatae officia corrupti 
+                    autem iusto doloribus necessitatibus.
+                </p>
+                <div class="buttons">
+                    <a href="#">COMPOSITION</a>
+                    <a href="#">WORK</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="circle">
+            <p id="text"></p>
+        </div>
+
+        <div class="box two">
+            <div class="box-box">
+
+                <div class="image">
+                    <img src="img.jpg" alt="">
+                </div>
+
+                <div class="column">
+                    <div class="column-text column-text-one">
+                        <p>TEXTURE</p>
+                        <p>CONSTRUCTOR</p>
+                    </div>
+                    <div class="column-text column-text-two">
+                        <p></p>
+                        <p></p>
+                        <p>BE LIKE WATER</p>
+                    </div>
+                    <div class="column-text column-text-three">
+                        <p></p>
+                        <p>IMAGINE &</p>
+                        <p>BUILD</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        const str = 'Henry-Structural-Website-Design-'
+        const text = document.getElementById('text')
+        window.onload =()=>{
+            for(let i=0; i<str.length; i++){
+                let span = document.createElement('span')
+                span.innerText = str[i]
+                text.appendChild(span)
+                span.style.transform = `rotate(${i*11}deg)`
+            }
+        }
+    </script>
+
+</body>
+</html>
