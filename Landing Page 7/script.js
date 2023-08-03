@@ -1,23 +1,13 @@
-gsap.registerPlugin(ScrollTrigger);
+const cursor = document.querySelector(".gallery-button")
+const gallery = document.querySelector(".gallery-entry")
 
-gsap.from("h1 div", {translateY: "-100%", delay: 0.5, stagger: 0.08})
+const rect = cursor.getBoundingClientRect()
+const cursorX = rect.left
+const cursorY = rect.top
 
-gsap.to(".header h2", {
-    color: "black",
-    stagger: 1,
-    scrollTrigger: {
-      trigger: ".header h2",
-      start: "top 75%",
-      end: "bottom top",
-    },
-  });
+gallery.addEventListener("mousemove", function(e) {
+    cursor.style.setProperty('--x', `${e.clientX - cursorX - 75}px`)
+    cursor.style.setProperty('--y', `${e.clientY - cursorY - 75}px`)
+})
 
-  gsap.to(".sub-header", {
-    color: "black",
-    stagger: 1,
-    scrollTrigger: {
-      trigger: ".sub-header",
-      start: "top 80%",
-      end: "bottom top",
-    },
-  });
+
