@@ -1,13 +1,42 @@
-const cursor = document.querySelector(".gallery-button")
-const gallery = document.querySelector(".gallery-entry")
+/*___________GALLERY____________*/ 
+gsap.registerPlugin(ScrollTrigger);
 
-const rect = cursor.getBoundingClientRect()
-const cursorX = rect.left
-const cursorY = rect.top
+gsap.to(".gallery-entry", {
+    transform: "translateX(calc( (-100% / 3) * 2))", //To get to 66.66% since there are 3 slides in .gallery-entry
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".gallery",
+      start: "bottom bottom",
+      end: "+=" + (window.innerHeight * 5),
+      scrub: true,
+      pin: true,
+    }
+});
 
-gallery.addEventListener("mousemove", function(e) {
-    cursor.style.setProperty('--x', `${e.clientX - cursorX - 75}px`)
-    cursor.style.setProperty('--y', `${e.clientY - cursorY - 75}px`)
+
+
+/*___________PRODCUT-CARD____________*/ 
+const titles = gsap.utils.toArray(".image-p-text")
+const tl = gsap.timeline({repeat:-1, repeatDelay: -0.09})
+
+titles.forEach(title => {
+    const splitTitle = new SplitType(title)
+
+    tl
+    
+        .from(splitTitle.chars, {
+            opacity: 0,
+            y: 20,
+            rotateX: -90,
+            stagger: 0.1,
+        }, "<")
+
+        .to(splitTitle.chars, {
+            opacity: 0,
+            y: -20,
+            rotateX: 90,
+            stagger: 0.1,
+        }, "<1")
 })
 
-
+  
