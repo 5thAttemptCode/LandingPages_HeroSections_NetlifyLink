@@ -1,3 +1,22 @@
+
+var menuBtn = document.querySelector('.menuBtn');
+var menu = document.querySelector('.menu');
+var ul = document.querySelector("ul")
+var body = document.querySelector("body")
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('is-active');
+  menuBtn.classList.toggle('is-active');
+  body.classList.toggle('is-active');
+});
+
+ul.addEventListener('click', () => {
+  menu.classList.toggle('is-active');
+  menuBtn.classList.toggle('is-active');
+  body.classList.toggle('is-active');
+});
+
+
 /*___________GALLERY____________*/ 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -8,29 +8,46 @@
 </head>
 <body>
 
-    <nav>
-        <a href="#products">PRODUCTS</a>
-        <a href="#gallery">GALLERY</a>
-        <a href="#">CONTACT</a>
-    </nav>
-    
-    <div class="background">
+<!-------------MENU & NAV------------->
+    <div class="navbtn">
+        <a href="#home" class="logo">STOL</a>
+        <div class="menuBtn logo">
+            <span>MENU</span>
+            <span>CLOSE</span>
+        </div>
+    </div>
 
+    <div class="menu">
+        <ul>
+            <a href="#products" class="serif">PRODUCTS</a>
+            <a href="#gallery" class="serif">GALLERY</a>
+            <a href="#contact" class="serif">CONTACT</a>
+        </ul>
+    </div>
+    
+
+<!-------------MARQUEE BACKGROUND------------->
+    <div class="background">
         <div class="marquee" aria-hidden="true">
             <h1 class="marquee-text">SMART OG MONOCHROM DESIGN SMART OG MONOCHROM DESIGN SMART OG MONOCHROM DESIGN</h1>
             <h1 class="marquee-text other-direction"> MINIMAL AND TIMELESS ELEGANCE MINIMAL AND TIMELESS ELEGANCE MINIMAL AND TIMELESS ELEGANCE</h1>
             <h1 class="marquee-text">SUSTAINABLE FOR LONGIVITY SUSTAINABLE FOR LONGIVITY SUSTAINABLE FOR LONGIVITY</h1>
         </div>
-
     </div>
 
+
+<!-------------MAIN OVERLAY------------->
+
     <section>
+
+        <!-------------INFO BOX & TRANSPARENT ELEMENT------------->
         <div class="transparent">
             <div class="info">
-                <h3>STOL</h3>
                 <div class="info-text">
-                    <h2>EMAIL</h2>
-                    <h2 class="serif">STOL@MAIL.DK</h2>
+                    <div class="mail">
+                        <h2>EMAIL</h2>
+                        <h2 class="serif">STOL@MAIL.DK</h2>
+                    </div>
                     <br>
                     <h4>CONTACT</h4>
                     <p>STOL moeble</p>
@@ -41,15 +58,20 @@
             </div>
         </div>
 
+
+        <!-------------MAIN ELEMENT------------->
         <div class="main-container">
 
             <div class="nav"></div>
 
-            <div class="largeName">
+
+            <div class="intro" id="home">
                 <h1>STOL</h1>
             </div>
 
+
             <div class="container">
+
                 <div class="about section-parts">
                     <p class="about-p"><span class="serif">STOL</span> IS A DANISH FURNITURE DESIGN STUDIO BASED IN <span class="serif">COPENHAGEN</span></p>
                     <div class="about-text">
@@ -74,7 +96,7 @@
                         <div class="image">
                             <img src="img1.png" alt="">
                         </div>
-                        <div class="image-p-container">
+                        <div class="image image-p-container">
                             <p class="image-p-text">STOL</p>
                             <p class="image-p-text">STOL</p>
                             <p class="image-p-text">STOL</p>
@@ -139,14 +161,14 @@
                     <div class="skill-list">
                         <p class="border-top border-right">DESIGN STRATEGY</p>
                         <p class="border-top">BRAND STRATEGY</p>
-                        <p class="border border-right">DESIGN & PRODUCTION</p>
+                        <p class="border border-none border-right">DESIGN & PRODUCTION</p>
                         <p class="border">MATERIAL CONSULTING</p>
                         <p class="border-bottom border-right">INTERIOR ARCHITECTURE</p>
-                        <p class="border-bottom"></p>
+                        <p class="border-bottom border-none"></p>
                     </div>
                 </div>
 
-                <div class="contact">
+                <div class="contact" id="contact">
                     <h2><span class="serif">CONTACT</span> US HERE</h2>
                     <div class="contact-info">
                         <div class="contact-details">
