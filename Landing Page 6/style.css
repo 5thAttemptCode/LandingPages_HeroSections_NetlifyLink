@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: #242424;
+    padding: 1vh;
+}
+
+
+/*______________________________________________________________________________*/
+nav{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+}
+
+nav ul{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+li{
+    height: calc(100% - 8px);
+}
+
+a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0 30px;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.tickets{
+    padding: 0 100px;
+    background: rgb(51, 63, 46);
+}
+
+
+/*______________________________________________________________________________*/
+.detail{
+    border: 1px solid #141414;
+    padding: 3px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #141414;
+    padding-top: 10px;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px
+}
+
+h3{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 35px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    filter: sepia(50%);
+}
+
+
+/*______________________________________________________________________________*/
+section{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 10vh - 12px);
+    display: grid;
+    grid-template-columns: 0.65fr repeat(2, 1fr);
+    grid-template-rows: 1fr 1.2fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.container{
+    border-radius: 30px;
+}
+
+.container.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*______________________________________________________________________________*/
+.container.one{
+    grid-area: 1/1/3/2;
+    background: rgb(137, 137, 105);
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.container.one .img{
+    width: 95%; 
+    height: 70%;
+}
+
+
+/*______________________________________________________________________________*/
+.container.two{
+    position: relative;
+    grid-area: 1/2/2/4;
+    background: rgb(200, 164, 132);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0 5px;
+}
+
+.container.two .box.one{
+    grid-area: 1 / 1 / 2 / 2; 
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container.two .box.two{
+    grid-area: 1 / 2 / 2 / 3; 
+    position: relative;
+}
+
+.container.two .box.two img{
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+}
+
+.container.two .box.three{
+    grid-area: 2 / 1 / 3 / 3; 
+    padding: 0;
+}
+
+
+/*______________________________________________________________________________*/
+.container.three{
+    grid-area: 2/2/3/3;
+    background: rgb(164, 100, 73);
+    justify-content: space-around;
+    align-items: left;
+    padding: 0 10px;
+}
+
+.container.three .detail,
+.container.three h3{
+    margin-left: 10px;
+}
+
+.container.three .image{
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.container.three .image img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*______________________________________________________________________________*/
+.container.four{
+    grid-area: 2/3/3/4;
+    background: rgb(168, 147, 162);
+    justify-content: space-between;
+    align-items: left;
+    padding: 10px 20px;
+}
