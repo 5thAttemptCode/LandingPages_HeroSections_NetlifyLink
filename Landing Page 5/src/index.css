@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppins;
 }
 
 body{
@@ -14,11 +15,12 @@ section{
   gap: 10px;
 }
 
-.box{
+.container{
   height: 100vh;
   width: 100%; 
   z-index: 10;
   padding: 10px;
+  background: linear-gradient(45deg, rgba(184,184,184,1) 25%, rgba(183,190,215,1) 51%, rgba(184,184,184,1) 100%);
 }
 
 .canvas{
@@ -31,5 +33,6 @@ section{
 Canvas{
   height: 100%;
   width: 100%;
-  background: rgb(186, 186, 186)
 }
+
+

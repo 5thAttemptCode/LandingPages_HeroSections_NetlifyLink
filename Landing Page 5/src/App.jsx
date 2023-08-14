@@ -10,12 +10,12 @@ export default function App() {
   return (
     <>
       <section>
-        <div className="box">
-         <Bar />
+        <div className="container">
+         <Bar background="black" height="10vh" />
          <Main />
         </div>
         <div className="canvas">
-          <Experience />
+          {/* <Experience /> */}
         </div>
       </section>
     </>
