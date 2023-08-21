@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "REACT ZAPHYR CHR.",
+            "price": 2549,
+            "image": "https://images.pexels.com/photos/3766111/pexels-photo-3766111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+
+        {
+            "id": 2,
+            "name": "VUE LUNA AZUL",
+            "price": 3199,
+            "image": "https://images.pexels.com/photos/9982009/pexels-photo-9982009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+
+        {
+            "id": 3,
+             "name": "REACT THREE NOIR",
+            "price": 3298,
+            "image": "https://images.pexels.com/photos/16739807/pexels-photo-16739807/free-photo-of-close-up-of-a-black-mans-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+
+        {
+            "id": 4,
+            "name": "J.S GOLD SCRIPT",
+            "price": 2990,
+            "image": "https://images.pexels.com/photos/3083461/pexels-photo-3083461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+            "id": 5,
+            "name": "REACT ZAPHYR CHR.",
+            "price": 2549,
+            "image": "https://images.pexels.com/photos/3766111/pexels-photo-3766111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+
+        
+
+    ]
+}
