@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "json-server --watch ./database/db.json" 
+    "start": "json-server --watch database/db.json"
   },
   "keywords": [],
   "author": "",
