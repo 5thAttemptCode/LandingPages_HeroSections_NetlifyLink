@@ -1,3 +1,6 @@
+Landing Page 7 Link:
+https://stol-dk.netlify.app/
+
 Landing Page 9 Link:
 https://mre-c.netlify.app/
 
