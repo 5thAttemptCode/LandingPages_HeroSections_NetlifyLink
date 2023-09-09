@@ -26,7 +26,7 @@ tl.to(".box_one", {
 })
 
 tl.to(".box_two", {
-    height: "30%",
+    height: "30.1%",
     scrollTrigger: {
         trigger:".box_one",
         start: vh(100) + "top",
