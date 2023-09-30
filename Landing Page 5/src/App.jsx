@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Home'
-import ProductPage from './ProductPage'
-import ProductSlider from './ProductSlider'
-import Nav from './Nav'
+import Home from './components/landingPage/Home'
+import ProductPage from './components/productPage/ProductPage'
+import ProductSlider from './components/productSlider/ProductSlider'
+import Nav from './components/nav/Nav'
 
 
 export default function App() {
