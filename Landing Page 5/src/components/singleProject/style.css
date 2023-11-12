@@ -1,0 +1,35 @@
+.single-project{
+    width: 100%;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid var(--color);
+}
+
+.data-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+.year-location{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.info{
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.info.active{
+    margin-top: 10px;
+    height: 500px;
+}
+
+.info > img{
+    height: 100%;
+    object-fit: cover;
+}

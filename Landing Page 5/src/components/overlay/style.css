@@ -1,0 +1,20 @@
+
+.overlay{
+    position: absolute;
+    inset: -110%;
+    background-image: url("/noise.jpg");
+    opacity: 15%;
+    z-index: 10000;
+    pointer-events: none;
+    animation: shift 0.2s linear infinite both;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(10%) ;
+    }
+
+    100% {
+        transform: translateX(-10%) ;
+    }
+} 

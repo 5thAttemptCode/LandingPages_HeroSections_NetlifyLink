@@ -1,0 +1,6 @@
+.home{
+    width: 100%;
+    z-index: 100;
+    background: var(--background);
+    margin-top: 360px;
+}
