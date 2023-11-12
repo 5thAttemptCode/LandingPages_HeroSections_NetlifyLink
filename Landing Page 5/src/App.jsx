@@ -1,21 +1,19 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './components/landingPage/Home'
-import ProductPage from './components/productPage/ProductPage'
-import ProductSlider from './components/productSlider/ProductSlider'
-import Nav from './components/nav/Nav'
-
+import Nav from './components/nav'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/home/index'
+import About from './pages/about/index'
+import Overlay from './components/overlay/Overlay'
 
 export default function App() {
   return (
     <BrowserRouter>
-    <Nav />
+      <Nav />
+      {/* <Overlay /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/productpage/:productId" element={<ProductPage />} />
+        <Route index element={ <Home /> } />
+        <Route path="/about" element={ <About /> } />
       </Routes>
-      <ProductSlider />
     </BrowserRouter>
   )
 }
-
