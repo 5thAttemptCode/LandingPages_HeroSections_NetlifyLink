@@ -4,32 +4,41 @@
     border-bottom: 1px solid var(--color);
 }
 
-.data-wrapper{
+.single-project > .data-wrapper{
     display: flex;
     justify-content: space-between;
     width: 100%;
     cursor: pointer;
 }
 
-.year-location{
+.single-project > .data-wrapper .year-location{
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    width: var( --widthYearLocation);
 }
 
-.info{
+.single-project > .info{
     height: 0px;
     width: 100%;
     overflow: hidden;
     transition: all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.info.active{
+.single-project > .info.active{
     margin-top: 10px;
     height: 500px;
 }
 
-.info > img{
-    height: 100%;
+.single-project > .info .info-box{
+    width: 50%;
+    margin-block: 2em 0 ;
+}
+
+.single-project > .info img{
+    height: 100%; 
+    max-width: 50%;
     object-fit: cover;
 }

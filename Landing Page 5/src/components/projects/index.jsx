@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import './style.css'
 
 import { db } from '../../utils/firebase.config'
@@ -8,12 +8,11 @@ import SingleProject from '../singleProject'
 
 export default function Projects() {
 
-  const [ projects, setProjects ] = useState()
+  const [ projects, setProjects ] = useState([])
+  const projectRef = useMemo(() => collection(db, "buildings"), [])
+  const q = useMemo(() => query(projectRef), [ projectRef ])
 
   useEffect(() => {
-    const projectRef = collection(db, "buildings")
-    const q = query(projectRef)
-
     getDocs(q)
       .then((querySnapshot) => {
         let projects = []
@@ -29,7 +28,7 @@ export default function Projects() {
 
 
   //This function gets the previous index as an argument and returns null if this previous index equals the
-  //index of the clicked elementm, otherwise, it returns the index. That way, clicking an active button will deactivate it, 
+  //index of the clicked element, otherwise, it returns the index. That way, clicking an active button will deactivate it, 
   //while clicking a deactivated button will move the activeIndex to that button.
   const [ activeIndex, setActiveIndex ] = useState(null)
   const handleItemClick = (index) => {
@@ -42,7 +41,7 @@ export default function Projects() {
         <div className="header">
           <p>project name</p>
           <div>
-            <p>year</p>
+            <p className='year'>year</p>
             <p>location</p>
           </div>
         </div>

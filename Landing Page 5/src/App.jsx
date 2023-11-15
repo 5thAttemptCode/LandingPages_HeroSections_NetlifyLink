@@ -3,13 +3,13 @@ import Nav from './components/nav'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/index'
 import About from './pages/about/index'
-import Overlay from './components/overlay/Overlay'
+import Overlay from './components/overlay/index'
 
 export default function App() {
   return (
     <BrowserRouter>
       <Nav />
-      {/* <Overlay /> */}
+      <Overlay />
       <Routes>
         <Route index element={ <Home /> } />
         <Route path="/about" element={ <About /> } />

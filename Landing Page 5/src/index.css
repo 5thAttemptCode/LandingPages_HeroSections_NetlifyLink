@@ -4,6 +4,8 @@
 
   /* --background: #151515;
   --color: #e3e2e2; */
+
+  --widthYearLocation: 30%;
 }
 
 *{
@@ -30,4 +32,53 @@ body{
   background: var(--background);
   color: var(--color);
   overflow-x: hidden;
+}
+
+
+/*______________________________________________*/
+@media(max-width: 768px){
+  :root{
+    --widthYearLocation: 40%;
+  }
+
+  .single-project > .info{
+    flex-direction: column;
+    transition: all 0s;
+  }
+
+  .single-project > .info.active{
+      height: 100%;
+  }
+
+  .single-project > .info .info-box{
+      width: 100%;
+      margin-block: 0 2em;
+  }
+
+  .about > .section{
+    flex-direction: column;
+    gap: 5vh
+  }
+
+  .about > .section > div{
+      width: 100%;
+  }
+}
+
+@media(max-width: 550px){
+  .projects > .header > div,
+  .single-project > .data-wrapper .year-location{
+    justify-content: flex-end;
+  }
+
+  .single-project > .data-wrapper .year-location .year{
+    display: none
+  }
+}
+
+@media(max-width: 350px){
+  .projects > .header > div,
+  .single-project > .data-wrapper .year-location{
+    display: none;
+  }
 }

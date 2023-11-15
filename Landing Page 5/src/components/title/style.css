@@ -5,7 +5,8 @@
 }
 
 .title > h1{
-    font-size: 400px;
+    font-size: clamp(7.5rem, -24.375rem + 70vw, 25rem);
     line-height: 0.8;
     overflow: hidden;
+    padding-right: 1em;
 }

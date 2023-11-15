@@ -8,12 +8,13 @@ export default function SingleProject({ project, active, clickHandler }) {
       <div className="data-wrapper">
         <p>{project.name}</p>
         <div className='year-location'>
-          <p>{project.year}</p>
+          <p className='year'>{project.year}</p>
           <p>{project.location}</p>
         </div>
       </div>
       <div className={`info ${active ? 'active' : ''}`}>
         <img src={project.image} alt="" />
+        <p className='info-box'>{project.description}</p>
       </div>
     </div>
   )

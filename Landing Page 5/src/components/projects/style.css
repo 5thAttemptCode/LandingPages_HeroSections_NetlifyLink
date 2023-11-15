@@ -7,21 +7,22 @@
     position: sticky;
     top: 0;
     width: 100%;
-    font-size: 18px;
     padding: 0.5em 1em;
     border-top: 1px solid var(--color);
     border-bottom: 1px solid var(--color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--background);
-    /* background-image: linear-gradient(to right, red 0%, red 25%, blue 25%, blue 50%, green 50%, green 75%, yellow 75%); */
+    /* background: var(--background); */
+    background: red;
 }
 
 .projects > .header > div{
-    width: 20%;
+    width: var( --widthYearLocation);
     display: flex;
     justify-content: space-between;
 }
+
+
 
 
