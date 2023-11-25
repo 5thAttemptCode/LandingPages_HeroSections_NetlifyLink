@@ -4,9 +4,11 @@ import './style.css'
 
 export default function Title() {
 
+  const H1 = ({children}) => <h1>{children}</h1>
+
   return (
     <div className="title">
-      <h1>BRUT</h1>
+      <H1>BRUT</H1>
     </div>
   )
 }

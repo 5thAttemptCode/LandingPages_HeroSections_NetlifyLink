@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import './style.css'
 
-import { db } from '../../utils/firebase.config'
 import { collection, getDocs, query } from 'firebase/firestore'
-import SingleProject from '../singleProject'
+import { db } from '@/utils/firebase.config'
+import SingleProject from '@/components/singleProject'
 
 
 export default function Projects() {

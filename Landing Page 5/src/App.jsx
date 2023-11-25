@@ -1,9 +1,11 @@
 import React from 'react'
-import Nav from './components/nav'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/home/index'
-import About from './pages/about/index'
-import Overlay from './components/overlay/index'
+
+import About from '@/pages/about/index'
+import Home from '@/pages/home/index'
+import Nav from '@/components/nav'
+import Overlay from '@/components/overlay/index'
+
 
 export default function App() {
   return (

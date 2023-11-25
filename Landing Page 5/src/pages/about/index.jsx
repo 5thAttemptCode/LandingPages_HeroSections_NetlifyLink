@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 
+
 export default function About() {
 
   const H6 = ({children}) => <h6>{children}</h6>

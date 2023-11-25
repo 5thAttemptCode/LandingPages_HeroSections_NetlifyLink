@@ -1,6 +1,8 @@
 import React from 'react'
 import './style.css'
+
 import { motion } from 'framer-motion'
+
 
 const FuzzyOverlay = () => {
   return <motion.div

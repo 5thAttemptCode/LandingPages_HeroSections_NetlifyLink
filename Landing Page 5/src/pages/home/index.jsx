@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
-import Projects from '../../components/projects'
-import Title from '../../components/title'
+import Projects from '@/components/projects'
+import Title from '@/components/title'
 
 
 export default function Home() {
