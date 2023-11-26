@@ -1,3 +1,6 @@
+Landing Page 2 Link:
+https://5thattemptcode-team-section.netlify.app/
+
 Landing Page 5 Link:
 https://cs-studio.netlify.app/
 
