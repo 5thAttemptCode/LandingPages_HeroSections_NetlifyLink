@@ -10,7 +10,6 @@
 
 body{
     background: linear-gradient(21deg, rgba(255,204,200,1) 0%, rgba(142,195,222,1) 50%);
-    /* overflow: hidden; */
 }
 
 a{
@@ -22,16 +21,16 @@ nav{
     top: 0;
     width: 100%;
     height: 12vh;
-    backdrop-filter: blur(20px);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 5vw;
+    z-index: 100;
 }
 
 nav .logo{
-    position: absolute;
-    left: 5vh;
+    position: fixed;
+    left: 5vw;
     height: 100%;
     font-size: 20px;
     display: flex;
@@ -40,10 +39,11 @@ nav .logo{
     font-weight: 500;
 }
 
-nav ul{
-    width: 30%;
+nav > ul{
+    min-width: 30%;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     background: rgb(255, 255, 255, 0.4);
     backdrop-filter: blur(20px);
     padding: 20px 40px;
@@ -51,11 +51,57 @@ nav ul{
     border: 2px solid whitesmoke;
 }
 
+
+/*_________________________________________________*/
+.responsive-nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    border: 2px solid whitesmoke;
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(4% at right 70px top 70px);
+    display: none;
+    z-index: 100;
+    transition: clip-path 0.5s;
+}
+
+.responsive-nav.active{
+    clip-path: circle(100%);
+}
+
+.nav-button{
+    position: fixed;
+    top: 60px;
+    right: 46px;
+    height: 20px;
+    width: 50px;
+    border-block: 3px solid black;
+    z-index: 1000;
+    display: none;
+    pointer-events: none;
+}
+
+.responsive-nav > ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+
+/*_________________________________________________*/
 section{
     position: relative;
     width: 100%;
+    height: calc(100vh - 12vh);
     margin-top: 12vh;
-  
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,61 +110,13 @@ section{
     padding: 1vh;
 }
 
-.container{
-    width: 100%;
-    display: flex;
-    padding: 10vh 5vw;
-}
-
-.container h1{
-    line-height: 80%;
-    font-size: clamp(3.125rem, -0.7813rem + 12.5vw, 6.25rem);
-    font-weight: 400;
-}
-
-.container.top{
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.container.bottom{
-    justify-content: space-between;
-}
-
-.container.bottom .box.one{
-    width: 60%;
-}
-
-.container.bottom .box.two{
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
-    font-size: 30px;
-    color: rgb( 0, 0, 0, 0.7);
-}
-
-@media (max-width: 1024px){
-    .container.bottom{
-        flex-direction: column;
-        gap: 10vh;
-    }
-
-    .container.bottom .box.one,
-    .container.bottom .box.two{
-        width: 100%;
-    }
-}
-
-/* body::after{
+section::after{
     content: '';
     position: absolute;
-    bottom: -60%;
-    left: -3%;
-    scale: 1.7;
-    width: 100vh;
-    height: 100vh;
+    top: 20%;
+    left: -20%;
+    height: 600px;
+    width: 600px;
     border-radius: 50%;
     border: 2px dashed rgb(0, 0, 0, 0.5);
     animation: rotate 5s infinite linear;
@@ -133,4 +131,70 @@ section{
     100%{
         rotate: 360deg
     }
-}   */
+}  
+
+
+/*_________________________________________________*/
+.container{
+    width: 100%;
+    height: 50%;
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+}
+
+.container h1{
+    line-height: 82%;
+    font-size: clamp(3.75rem, 0.625rem + 10vw, 6.25rem);
+    font-weight: 400;
+    text-wrap: balance;
+}
+
+.container.top{
+    text-align: right;
+}
+
+.container.bottom .box-one{
+    width: 60%;
+}
+
+.container.bottom .box-two{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
+    color: rgb( 0, 0, 0, 0.7);
+}
+
+
+/*_________________________________________________*/
+@media (max-width: 1024px){
+    .container.bottom{
+        margin-bottom: 5vw;
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    .container.bottom .box{
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px){
+    nav{
+        display: none;
+    }
+
+    .responsive-nav,
+    .nav-button{
+        display: block;
+    }
+}
+
+@media (max-width: 600px){
+    .container h1{
+        line-height: 1.1
+    }
+}
