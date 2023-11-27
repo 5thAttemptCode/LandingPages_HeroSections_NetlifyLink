@@ -1,7 +1,7 @@
 Landing Page 2 (Team-section) Link:
 https://5thattemptcode-team-section.netlify.app/
 
-Landing Page 4 (Hero-section) Link:__
+Landing Page 4 (Hero-section) Link:  
 https://haven-herosection.netlify.app/
 
 Landing Page 5 Link:
