@@ -1,0 +1,23 @@
+.content-box-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2em
+}
+
+.content-box{
+    width: 400px;
+    border: 1px solid var(--color);
+    background: rgb(65, 87, 113, 0.5);
+    padding: 1em 1.3em;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.content-box:hover{
+    background: #425873;
+}
+
+.content-box > h3{
+    margin-bottom: 0.5em;
+    color: white;
+}

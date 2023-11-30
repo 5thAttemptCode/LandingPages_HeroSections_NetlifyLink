@@ -1,0 +1,36 @@
+header{
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+}
+
+header > h4{
+    position: fixed;
+    top: 1em; 
+    left: 1em;
+    font-size: 20px;
+}
+
+header > nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 1em;
+    width: 30%;
+}
+
+nav > a{
+    padding-block: 0.5em;
+    margin-block-start: 1em;
+    color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+nav > a:hover{
+    background: var(--hoverColor);
+}
