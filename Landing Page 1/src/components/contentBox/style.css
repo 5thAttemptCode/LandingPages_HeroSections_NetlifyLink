@@ -1,16 +1,15 @@
 .content-box-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.2em
 }
 
 .content-box{
-    width: 400px;
     border: 1px solid var(--color);
     background: rgb(65, 87, 113, 0.5);
     padding: 1em 1.3em;
     border-radius: 20px;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 
 .content-box:hover{

@@ -7,7 +7,7 @@ export default function Home() {
       <div className='title'>
         <h1>Opus Global Investments</h1>
         <br />
-        <h3>Invest with Confidence: Opus Global Investments - <br /> Where Transparency Meets Security</h3>
+        <h3>Invest with Confidence: Opus Global Investments - Where Transparency Meets Security</h3>
       </div>
     </div>
   )

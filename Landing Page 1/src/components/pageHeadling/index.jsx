@@ -3,6 +3,6 @@ import './style.css'
 
 export default function PageHeadline(props) {
   return (
-    <h2>{props.h2}</h2>
+    <h2 className='page-heading'>{props.h2}</h2>
   )
 }

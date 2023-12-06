@@ -21,7 +21,7 @@ header > nav{
     width: 30%;
 }
 
-nav > a{
+a{
     padding-block: 0.5em;
     margin-block-start: 1em;
     color: var(--color);
@@ -31,6 +31,63 @@ nav > a{
     transition: 0.2s;
 }
 
-nav > a:hover{
+a:hover{
     background: var(--hoverColor);
+}
+
+.hamburger{
+    display: none;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    height: 15px;
+    width: 50px;
+    border-block: 3px solid var(--color);
+
+}
+
+.responsive-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1c2633;
+    transition: all 0.5s;
+}
+
+@media(max-width: 1200px){
+    header > nav{
+        position: fixed;
+        right: 1em;
+        width: 40%;
+        margin: 0 1em 0 0;
+    }
+}
+
+@media(max-width: 768px){
+    header > nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        z-index: 1000;
+    }
+
+    .responsive-nav{
+        display: flex;
+    }
+
+    .responsive-nav > a{
+        width: 50%;
+    }
+
+    .open{
+        right: 0;
+    }
 }

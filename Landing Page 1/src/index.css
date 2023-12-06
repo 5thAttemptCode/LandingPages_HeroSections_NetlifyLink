@@ -17,11 +17,15 @@
   color: #efd69d;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 body{
   width: 100%;
 }
 
-.canvas, #root{
+.canvas{
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +35,7 @@ body{
 }
 
 .page-container{
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   min-height: 100vh;
@@ -47,15 +51,14 @@ h1, h2, h4{
 }
 
 h1{
-  font-size: 50px;
-}
-
-h2{
-  font-size: 33px;
+  font-size: clamp(1.875rem, 0.3125rem + 5vw, 3.125rem);
 }
 
 h3{
+  font-size: clamp(1rem, 0.7875rem + 0.68vw, 1.17rem);
   font-weight: 400;
+  max-width: 30vw;
+  min-width: 300px;
 }
 
 
