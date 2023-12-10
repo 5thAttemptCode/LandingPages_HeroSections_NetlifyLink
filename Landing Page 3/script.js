@@ -19,4 +19,4 @@ boxes.forEach(function(box, index) {
     }
 });
 
-// tl.to(".box", {opacity: 1, stagger: 0.7}, 0.5)
+tl.to(".box", {opacity: 1, stagger: 0.7}, 2)
