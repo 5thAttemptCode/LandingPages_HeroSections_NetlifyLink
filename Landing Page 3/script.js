@@ -1,22 +1,23 @@
-var tl = gsap.timeline();
+const tl = gsap.timeline()
+tl.to(".container", {opacity: 1, stagger: 0.5}, 0.2)
 
-const boxes = document.querySelectorAll('.box');
+
+const containers = document.querySelectorAll('.container')
 
 function clearActiveContainers() {
-    boxes.forEach(function(box) {
-        box.classList.remove('active');
-    });
+    containers.forEach(function(container) {
+        container.classList.remove('active')
+    })
 }
 
-boxes.forEach(function(box, index) {
-    box.onclick = function() {
-        if(boxes[index].classList.contains("active")){
-            boxes[index].classList.remove("active")
+containers.forEach(function(container, index) {
+    container.onclick = function() {
+        if(containers[index].classList.contains("active")){
+            containers[index].classList.remove("active")
         } else {
             clearActiveContainers(index)
-            boxes[index].classList.add("active")
+            containers[index].classList.add("active")
         }
     }
-});
+})
 
-tl.to(".box", {opacity: 1, stagger: 0.7}, 2)
