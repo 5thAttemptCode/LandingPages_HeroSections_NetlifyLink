@@ -1,3 +1,7 @@
+This is a collection of landing pages and hero section build with different tech-stacks, including their Netlify link for live demo. They will be updated or 
+exchanged over time. 
+
+
 Landing Page 1 (Landing Page - React, R3F) https://opus-global-investment.netlify.app/
 
 Landing Page 2 (Team-section, Brutalist UI - HTML, CSS, JS) Link: https://5thattemptcode-team-section.netlify.app/  
