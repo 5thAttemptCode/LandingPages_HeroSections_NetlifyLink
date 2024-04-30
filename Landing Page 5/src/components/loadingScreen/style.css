@@ -1,0 +1,61 @@
+.loading-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 10000;
+    overflow: hidden;
+    
+    .loading-bar{
+        position: relative;
+        height: 51vh;
+        width: 100%;
+        background: red;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 3rem;
+    }
+}
+
+.arrow_box{
+    position: relative;
+    height: 17vw;
+    width: 17vw;
+}
+
+.arrow_box_single{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+}
+
+.line{
+    position: absolute;
+    height: 20%;
+    width: 0;
+    background: #141414;
+}
+
+.arrow_box > .one{
+    top: 0;
+    left: 0;
+}
+
+.arrow_box > .two{
+    bottom: 0;
+    right: 0;
+    height: 0%;
+    width: 20%;
+}
+
+.arrow_box_single > .three{
+    right: 0;
+}
