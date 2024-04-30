@@ -5,6 +5,7 @@ import About from '@/pages/about/index'
 import Home from '@/pages/home/index'
 import Nav from '@/components/nav'
 import Overlay from '@/components/overlay/index'
+import LoadingScreen from './components/loadingScreen'
 
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
     <BrowserRouter>
       <Nav />
       <Overlay />
+      <LoadingScreen />
       <Routes>
         <Route index element={ <Home /> } />
         <Route path="/about" element={ <About /> } />
